@@ -1,0 +1,20 @@
+<div class="modal">
+  <div class="modal_container">
+    <h3 class="modal_title">{{title}}</h3>
+    <form action="{{action}}" class="modal_form">
+      <div class="modal_form-fields">
+        {{#each fields}}
+          {{> textField type=type name=name label=label placeholder=placeholder}}
+        {{/each}}
+      </div>
+      <div class="modal_form-buttons">
+        {{#each buttons}}
+          {{> button type=type label=label}}
+        {{/each}}
+      </div>
+      {{#each bottom}}
+        {{{this}}}
+      {{/each}}
+    </form>
+  </div>
+</div>
