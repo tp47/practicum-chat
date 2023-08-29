@@ -12,4 +12,4 @@ function registerHelpers() {
   });
 }
 
-export default registerHelpers;
+export { registerHelpers };

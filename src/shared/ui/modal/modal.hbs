@@ -11,10 +11,10 @@
         {{#each buttons}}
           {{> button type=type label=label}}
         {{/each}}
+        {{#each bottom}}
+          {{{this}}}
+        {{/each}}
       </div>
-      {{#each bottom}}
-        {{{this}}}
-      {{/each}}
     </form>
   </div>
 </div>

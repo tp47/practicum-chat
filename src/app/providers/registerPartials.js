@@ -13,4 +13,4 @@ function registerPartials() {
   Handlebars.registerPartial("layout", basicLayout);
 }
 
-export default registerPartials;
+export { registerPartials };

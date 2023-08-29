@@ -1,4 +1,19 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, serif;
-  font-size: 13px;
+  font-size: 16px;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
