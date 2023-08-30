@@ -4,10 +4,14 @@ import handlebars from "./vite-plugin-handlebars-precompile";
 
 export default defineConfig({
   root: resolve(__dirname, "src"),
+  build: {
+    outDir: "../dist",
+  },
   plugins: [handlebars()],
   resolve: {
     alias: {
       "@": resolve("./src"),
     },
   },
+  assetsInclude: ["**/*.svg"],
 });

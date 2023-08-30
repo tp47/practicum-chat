@@ -1,4 +1,60 @@
 {{#> layout}}
   <div class="profile-page">
+    <div class="profile-page_back">
+      <a href="/chats">
+        <img src="/arrow.svg"/>
+      </a>
+    </div>
+    <div class="profile">
+      {{> userImage}}
+
+      {{#getJsonContext '{
+        "items": [
+            {
+              "title": "Почта",
+              "value": "pochta@yandex.ru"
+            },
+            {
+              "title": "Логин",
+              "value": "ivanivanov"
+            },
+            {
+              "title": "Имя",
+              "value": "Иван"
+            },
+            {
+              "title": "Фамилия",
+              "value": "Иванов"
+            },
+            {
+              "title": "Имя в чате",
+              "value": "Иван"
+            },
+            {
+              "title": "Телефон",
+              "value": "+7 (909) 967 30 30"
+            }
+        ]
+        }'}}
+        {{> infoList this}}
+      {{/getJsonContext}}
+
+      {{#getJsonContext '{
+        "items": [
+            {
+              "title": "<a class=\"actions-list__edit\" href=\"/profile/me/about/edit\">Изменить данные</a>"
+            },
+            {
+              "title": "<a class=\"actions-list__edit\" href=\"/profile/me/password/edit\">Изменить пароль</a>"
+            },
+            {
+              "title": "<a class=\"actions-list__exit\" href=\"/signin\">Выйти</a>"
+            }
+        ]
+        }'}}
+        {{> actionsList this}}
+      {{/getJsonContext}}
+
+    </div>
   </div>
 {{/layout}}

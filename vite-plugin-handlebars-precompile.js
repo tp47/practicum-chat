@@ -1,7 +1,7 @@
 import Handlebars from "handlebars";
 
 export default function handlebars() {
-  const fileRegexp = /\.html$|\.hbs$|\.handlebars$/;
+  const fileRegexp = /\.hbs$|\.handlebars$/;
 
   return {
     name: "vite-plugin-handlebars-precompile",
