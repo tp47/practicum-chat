@@ -1,7 +1,7 @@
 {{#> layout}}
-  <div class="profile-page">
+  <div class="profile-page edit-profile-page">
     <div class="profile-page_back">
-      {{> button/back to="/chats"}}
+      {{> button/back to="/profile"}}
     </div>
     <div class="profile">
       {{> userImage}}
@@ -40,23 +40,10 @@
         {{> infoList this}}
       {{/getJsonContext}}
 
-      {{#getJsonContext '{
-        "items": [
-            {
-              "title": "<a class=\"actions-list__edit\" href=\"/profile-edit\">Изменить данные</a>"
-            },
-            {
-              "title": "<a class=\"actions-list__edit\" href=\"/password-edit\">Изменить пароль</a>"
-            },
-            {
-              "title": "<a class=\"actions-list__exit\" href=\"/signin\">Выйти</a>"
-            }
-        ]
-        }'}}
-        {{> actionsList this}}
-      {{/getJsonContext}}
-
+      <div class="profile_buttons">
+        {{> button label="Сохранить"}}
+      </div>
     </div>
   </div>
-  {{> modal isOverlay=true title="123"}}
 {{/layout}}
+

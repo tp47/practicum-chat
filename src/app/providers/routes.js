@@ -2,12 +2,16 @@ import loginPage from "@/pages/login/loginPage.hbs";
 import signupPage from "@/pages/signup/signupPage.hbs";
 import profilePage from "@/pages/profile/profilePage.hbs";
 import errorPage from "@/pages/error/errorPage.hbs";
+import editProfilePage from "@/pages/editProfile/editProfilePage.hbs";
+import editPasswordPage from "@/pages/editPassword/editPasswordPage.hbs";
 
 const routes = {
   "/signin": loginPage,
   "/signup": signupPage,
   "/profile": profilePage,
   "/error": serverErrorPage,
+  "/profile-edit": editProfilePage,
+  "/password-edit": editPasswordPage,
 };
 
 function notFoundPage() {

@@ -1,4 +1,7 @@
-<div class="modal">
+{{#if isOverlay}}
+  <div class="modal-overlay">
+{{/if}}
+  <div class="modal">
   <div class="modal_container">
     <h3 class="modal_title">{{title}}</h3>
     <form action="{{action}}" class="modal_form">
@@ -18,3 +21,6 @@
     </form>
   </div>
 </div>
+{{#if isOverlay}}
+</div>
+{{/if}}
