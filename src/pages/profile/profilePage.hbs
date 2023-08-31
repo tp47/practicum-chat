@@ -1,7 +1,7 @@
 {{#> layout}}
   <div class="profile-page">
     <div class="profile-page_back">
-      {{> button/back to="/chats"}}
+      {{> button/back to="/chat"}}
     </div>
     <div class="profile">
       {{> userImage}}
@@ -58,5 +58,22 @@
 
     </div>
   </div>
-  {{> modal isOverlay=true title="123"}}
+    {{#getJsonContext '{
+      "title": "Загрузите файл",
+      "isOverlay": true,
+      "fields": [
+        {
+          "type": "file",
+          "name": "avatar"
+        }
+        ],
+      "buttons": [
+        {
+          "type": "submit",
+          "label": "Поменять"
+        }
+        ]
+      }'}}
+      {{> modal this}}
+    {{/getJsonContext}}
 {{/layout}}

@@ -44,3 +44,6 @@
   align-items: center;
   justify-content: center;
 }
+.modal-overlay.hide {
+  display: none;
+}

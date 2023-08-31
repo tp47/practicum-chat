@@ -4,14 +4,17 @@ import profilePage from "@/pages/profile/profilePage.hbs";
 import errorPage from "@/pages/error/errorPage.hbs";
 import editProfilePage from "@/pages/editProfile/editProfilePage.hbs";
 import editPasswordPage from "@/pages/editPassword/editPasswordPage.hbs";
+import chatPage from "@/pages/chat/chatPage.hbs";
 
 const routes = {
+  "/": loginPage,
   "/signin": loginPage,
   "/signup": signupPage,
   "/profile": profilePage,
   "/error": serverErrorPage,
   "/profile-edit": editProfilePage,
   "/password-edit": editPasswordPage,
+  "/chat": chatPage,
 };
 
 function notFoundPage() {

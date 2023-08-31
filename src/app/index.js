@@ -11,6 +11,17 @@ function app() {
   document.addEventListener("DOMContentLoaded", () => {
     const root = document.querySelector("#app");
     root.innerHTML = page();
+
+    function toggleModal() {
+      document.querySelector(".modal-overlay").classList.toggle("hide");
+    }
+
+    document
+      .querySelector(".user-image span")
+      .addEventListener("click", toggleModal);
+    document
+      .querySelector(".modal-overlay")
+      .addEventListener("click", toggleModal);
   });
 }
 

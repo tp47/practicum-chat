@@ -22,5 +22,4 @@ function registerPartials() {
   Handlebars.registerPartial("listItem/info", listItemInfo);
   Handlebars.registerPartial("actionsList", actionsList);
 }
-
 export { registerPartials };
