@@ -10,7 +10,10 @@ export default defineConfig({
     rollupOptions: {
       output: {
         assetFileNames: (asset) => {
-          if (parse(asset.name).ext === ".svg") {
+          if (
+            parse(asset.name).ext === ".svg" ||
+            parse(asset.name).ext === ".png"
+          ) {
             return "assets/[name][extname]";
           }
           return "assets/[name].[hash][extname]";

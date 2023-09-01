@@ -16,12 +16,14 @@ function app() {
       document.querySelector(".modal-overlay").classList.toggle("hide");
     }
 
-    document
-      .querySelector(".user-image span")
-      .addEventListener("click", toggleModal);
-    document
-      .querySelector(".modal-overlay")
-      .addEventListener("click", toggleModal);
+    try {
+      document
+        .querySelector(".user-image span")
+        .addEventListener("click", toggleModal);
+      document
+        .querySelector(".modal-overlay")
+        .addEventListener("click", toggleModal);
+    } catch (error) {}
   });
 }
 
